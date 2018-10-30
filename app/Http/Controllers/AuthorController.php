@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Traits\ApiResponser;
 
 class AuthorController extends Controller
 {
+
+    use ApiResponser;
+
     /**
      * Create a new controller instance.
      *
