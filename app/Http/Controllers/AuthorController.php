@@ -14,6 +14,7 @@ class AuthorController extends Controller
 
     /**
      * The service to consume the author service
+     *
      * @var AuthorService
      */
     public $authorService;
@@ -52,7 +53,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * Retrieve and show an author
+     * Retrieve and show an instance of author
      *
      * @param $author
      * @return Response
@@ -64,7 +65,7 @@ class AuthorController extends Controller
     }
 
     /**
-     * Edit an author
+     * Update an instance of author
      *
      * @param Request $request
      * @param $author
@@ -77,10 +78,14 @@ class AuthorController extends Controller
     }
 
     /**
+     * Remove an instance of author
+     *
      * @param $author
+     * @return Response
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function destroy($author)
     {
-      // code...
+        return $this->successResponse($this->authorService->deleteAuthor($author));
     }
 }
