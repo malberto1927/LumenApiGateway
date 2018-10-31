@@ -30,7 +30,7 @@ class AuthorService
     }
 
     /**
-     * Get the full list of authors from the service
+     * Get the full list of authors from the service author
      *
      * @return string
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -40,8 +40,27 @@ class AuthorService
         return $this->performRequest('GET', '/authors');
     }
 
+    /**
+     * Create an instance of author from the service author
+     *
+     * @param $data
+     * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function createAuthor($data)
     {
         return $this->performRequest('POST', '/authors', $data);
+    }
+
+    /**
+     * Get an single instance of author from the service author
+     *
+     * @param $author
+     * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function obtainAuthor($author)
+    {
+        return $this->performRequest('GET', "/authors/{$author}");
     }
 }

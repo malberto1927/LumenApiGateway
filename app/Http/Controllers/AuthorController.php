@@ -30,6 +30,7 @@ class AuthorController extends Controller
 
     /**
      * Retrieve and show all the authors
+     *
      * @return \Illuminate\Http\Response
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
@@ -40,8 +41,10 @@ class AuthorController extends Controller
 
     /**
      * Creates an instance of authors
+     *
      * @param Request $request
      * @return Response
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function store(Request $request)
     {
@@ -50,10 +53,12 @@ class AuthorController extends Controller
 
     /**
      * @param $author
+     * @return Response
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function show($author)
     {
-      // code...
+        return $this->successResponse($this->authorService->obtainAuthor($author));
     }
 
     /**
