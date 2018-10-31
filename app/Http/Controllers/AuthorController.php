@@ -27,26 +27,45 @@ class AuthorController extends Controller
         $this->authorService = $authorService;
     }
 
+    /**
+     * Retrieve and show all the authors
+     * @return \Illuminate\Http\Response
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function index()
     {
-      // code...
+      return $this->successResponse($this->authorService->obtainAuthors());
     }
 
+    /**
+     * Creates an instance of authors
+     * @param Request $request
+     */
     public function store(Request $request)
     {
       // code...
     }
 
+    /**
+     * @param $author
+     */
     public function show($author)
     {
       // code...
     }
 
+    /**
+     * @param Request $request
+     * @param $author
+     */
     public function update(Request $request, $author)
     {
       // code...
     }
 
+    /**
+     * @param $author
+     */
     public function destroy($author)
     {
       // code...
