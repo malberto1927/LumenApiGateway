@@ -44,7 +44,7 @@ class AuthorController extends Controller
      * Creates an instance of authors
      *
      * @param Request $request
-     * @return Response
+     * @return \Illuminate\Http\Response
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function store(Request $request)
@@ -56,7 +56,7 @@ class AuthorController extends Controller
      * Retrieve and show an instance of author
      *
      * @param $author
-     * @return Response
+     * @return \Illuminate\Http\Response
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function show($author)
@@ -69,7 +69,7 @@ class AuthorController extends Controller
      *
      * @param Request $request
      * @param $author
-     * @return Response
+     * @return \Illuminate\Http\Response
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function update(Request $request, $author)
@@ -81,7 +81,7 @@ class AuthorController extends Controller
      * Remove an instance of author
      *
      * @param $author
-     * @return Response
+     * @return \Illuminate\Http\Response
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function destroy($author)
