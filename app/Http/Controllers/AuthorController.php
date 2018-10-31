@@ -52,6 +52,8 @@ class AuthorController extends Controller
     }
 
     /**
+     * Retrieve and show an author
+     *
      * @param $author
      * @return Response
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -62,12 +64,16 @@ class AuthorController extends Controller
     }
 
     /**
+     * Edit an author
+     *
      * @param Request $request
      * @param $author
+     * @return Response
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function update(Request $request, $author)
     {
-      // code...
+        return $this->successResponse($this->authorService->editAuthor($request->all(), $author));
     }
 
     /**

@@ -63,4 +63,17 @@ class AuthorService
     {
         return $this->performRequest('GET', "/authors/{$author}");
     }
+
+    /**
+     * Edit an single instance of author from the service author
+     *
+     * @param $data
+     * @param $author
+     * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function editAuthor($data, $author)
+    {
+        return $this->performRequest('PUT', "/authors/{$author}", $data);
+    }
 }
