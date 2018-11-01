@@ -17,6 +17,7 @@ class AuthorService
 
     /**
      * The base uri to consume the authors service
+     *
      * @var string
      */
     public $baseUri;

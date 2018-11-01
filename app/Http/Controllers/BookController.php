@@ -15,12 +15,14 @@ class BookController extends Controller
 
     /**
      * The service to consume the book service
+     *
      * @var BookService
      */
     public $bookService;
 
     /**
      * The service to consume the author service
+     *
      * @var BookService
      */
     public $authorService;

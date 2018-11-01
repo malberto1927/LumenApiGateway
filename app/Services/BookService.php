@@ -17,6 +17,7 @@ class BookService
 
     /**
      * The base uri to consume the books service
+     *
      * @var string
      */
     public $baseUri;
