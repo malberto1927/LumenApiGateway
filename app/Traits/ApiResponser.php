@@ -8,6 +8,7 @@ trait ApiResponser
 {
     /**
      * Return success response
+     *
      * @param string|array $data
      * @param int $code
      * @return \Illuminate\Http\Response
@@ -19,6 +20,7 @@ trait ApiResponser
 
     /**
      * Build error responses
+     *
      * @param string|array $message
      * @param int $code
      * @return \Illuminate\Http\JsonResponse
@@ -30,6 +32,7 @@ trait ApiResponser
 
     /**
      * Return an error in JSON format
+     *
      * @param string|array $message
      * @param int $code
      * @return \Illuminate\Http\Response
